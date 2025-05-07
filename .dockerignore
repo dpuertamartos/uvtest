@@ -1,0 +1,18 @@
+Dockerfile
+.dockerignore
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.ruff_cache
+.mypy_cache
+.DS_Store
+
+# Most importantly, exclude your local virtual environment if you have one
+.venv
+
+# Exclude development lock file as it's not for the production image
+requirements-dev.lock
