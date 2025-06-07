@@ -27,12 +27,12 @@ This repository serves as a professional, well-structured template for a Python 
 1.  **Clone the repository:**
     ```bash
     git clone <your-repo-url>
-    cd fastapi-interview-template
+    cd uvtest
     ```
 
 2.  **Create a virtual environment:**
     ```bash
-    uv venv
+    uv venv -p 3.11
     ```
 
 3.  **Activate the virtual environment:**
