@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+from app.config import settings
 from app.models.health_check import HealthCheck
 from app.services.calculate import calculate_sum
 
@@ -15,8 +16,8 @@ def health_check() -> HealthCheck:
     load balancers or uptime monitoring.
     """
     return HealthCheck(
-        name="fastapi-template",
-        version="0.1.0",
+        name=settings.APP_NAME,
+        version=settings.APP_VERSION,
         status="OK",
     )
 

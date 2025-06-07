@@ -1,11 +1,3 @@
-# Auto-detect and handle src directory structure
-import sys
-from pathlib import Path
-
-if Path(__file__).parent.parent.name == "src":
-    sys.path.insert(0, str(Path(__file__).parent.parent))
-# End of auto-detect and handle src directory structure
-
 from fastapi import FastAPI
 
 from app.config import settings
@@ -14,7 +6,7 @@ from app.routes.api import router as api_router
 app = FastAPI(
     title=settings.APP_NAME,
     description="Open API",
-    version="0.1.0",
+    version=settings.APP_VERSION,
 )
 
 app.include_router(api_router, prefix=settings.API_V1_STR)

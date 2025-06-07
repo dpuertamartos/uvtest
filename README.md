@@ -45,8 +45,9 @@ This repository serves as a professional, well-structured template for a Python 
     # First, compile the dev lock file to ensure it's up-to-date
     uv pip compile pyproject.toml --extra dev -o requirements-dev.lock
 
-    # Then, sync the environment with the lock file
+    # Then, sync the environment with the lock file and install the project
     uv pip sync requirements-dev.lock
+    uv pip install -e .
     ```
 
 ---
