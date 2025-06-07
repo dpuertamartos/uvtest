@@ -8,8 +8,8 @@ if Path(__file__).parent.parent.name == "src":
 
 from fastapi import FastAPI
 
-from app.api import router as api_router
 from app.config import settings
+from app.routes.api import router as api_router
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -21,7 +21,7 @@ app.include_router(api_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/", tags=["root"])
-def read_root():
+def read_root() -> dict[str, str]:
     return {"message": f"Welcome to {settings.APP_NAME}"}
 
 

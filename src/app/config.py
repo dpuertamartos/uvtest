@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     validated configuration, which prevents many common runtime errors."
     """
 
-    APP_NAME: str = "My Impressive API"
+    APP_NAME: str = "FastAPI Template"
     API_V1_STR: str = "/api/v1"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")

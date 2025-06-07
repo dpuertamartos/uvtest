@@ -67,3 +67,8 @@ uvicorn --app-dir src app.main:app --reload
 2. Lint with Ruff `ruff check .`
 3. Run Mypy for static type checking `mypy src`
 4. test `pytest`
+
+## Docker
+
+1. build `docker build -t uvtest .`
+2. run `docker run -p 8000:8000 uvtest`

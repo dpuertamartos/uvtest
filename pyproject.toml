@@ -30,7 +30,6 @@ quote-style = "double"
 
 [tool.mypy]
 strict = true
-python_path = "src"
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
